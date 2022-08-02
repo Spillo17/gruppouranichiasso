@@ -17,6 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::view('/about', 'pages.public.about');
+Route::view('/events', 'pages.events');
+Route::view('/foundation', 'pages.foundation');
+Route::view('/renovation', 'pages.renovation');
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
